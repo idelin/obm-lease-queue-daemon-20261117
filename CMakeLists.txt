@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.25)
+project(leaseq LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(leaseq main.cpp queue.cpp)
+find_package(SQLite3 REQUIRED)
+target_link_libraries(leaseq PRIVATE SQLite::SQLite3)
